@@ -23,14 +23,14 @@ A(1:2:2*n,8) = x2.*y1;
 A(2:2:2*n,8) = y2.*y1;
 A(1:2:2*n,9) = x2;
 A(2:2:2*n,9) = y2;
-disp(A);
+% disp(A);
+
 
 %% Homogeneous least squares : find 'h' minimizing ||Ah||^2
 % Eigenvectors of A'*A corresponding to smallest eigenvalue
 [~, ~, V] = svd(A);
 h = V(:, end);
 h = reshape(h,[3,3])';
-% for easy computation, divide by end of h value
 h = h/h(end);
 
 end

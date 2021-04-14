@@ -24,8 +24,7 @@ end
 
 % 3. choose the coef with the most inliers
 [~,idx] = max(inlrNum);
-f = fLib{idx};
+f = fLib{idx}';
 dist = funcDist(f,x,y);
 inlierIdx = find(dist < thDist);
-	
 end
